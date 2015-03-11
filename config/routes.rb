@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'pages/info'
+  get "pages/info"
+
+  root :to => redirect('/ideas')
+  resources :rails_girls
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

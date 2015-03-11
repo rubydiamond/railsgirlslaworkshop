@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rails Girls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Lname</th>
+      <th>Sex</th>
+      <th>Email</th>
+      <th>Zipcode</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>Under 21</th>
+      <th>Operating system</th>
+      <th>Newbie</th>
+      <th>Html css</th>
+      <th>Dash</th>
+      <th>Tryruby</th>
+      <th>Trygit</th>
+      <th>Code school</th>
+      <th>Done rg before</th>
+      <th>Lrthw</th>
+      <th>Ror tut hartl</th>
+      <th>Learn to program</th>
+      <th>Other ruby tuts</th>
+      <th>Other rails tuts</th>
+      <th>Know another lang</th>
+      <th>Employed programmer</th>
+      <th>Rails installed</th>
+      <th>More info</th>
+      <th>Study group</th>
+      <th>How</th>
+      <th>Why</th>
+      <th>Accepted</th>
+      <th>Tweeted about</th>
+      <th>Rsvp response</th>
+      <th>Ranking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rails_girls.each do |rails_girl| %>
+      <tr>
+        <td><%= rails_girl.fname %></td>
+        <td><%= rails_girl.lname %></td>
+        <td><%= rails_girl.sex %></td>
+        <td><%= rails_girl.email %></td>
+        <td><%= rails_girl.zipcode %></td>
+        <td><%= rails_girl.phone %></td>
+        <td><%= rails_girl.twitter %></td>
+        <td><%= rails_girl.under_21 %></td>
+        <td><%= rails_girl.operating_system %></td>
+        <td><%= rails_girl.newbie %></td>
+        <td><%= rails_girl.html_css %></td>
+        <td><%= rails_girl.dash %></td>
+        <td><%= rails_girl.tryRuby %></td>
+        <td><%= rails_girl.tryGit %></td>
+        <td><%= rails_girl.code_school %></td>
+        <td><%= rails_girl.done_rg_before %></td>
+        <td><%= rails_girl.lrthw %></td>
+        <td><%= rails_girl.ror_tut_hartl %></td>
+        <td><%= rails_girl.learn_to_program %></td>
+        <td><%= rails_girl.other_ruby_tuts %></td>
+        <td><%= rails_girl.other_rails_tuts %></td>
+        <td><%= rails_girl.know_another_lang %></td>
+        <td><%= rails_girl.employed_programmer %></td>
+        <td><%= rails_girl.rails_installed %></td>
+        <td><%= rails_girl.more_info %></td>
+        <td><%= rails_girl.study_group %></td>
+        <td><%= rails_girl.how %></td>
+        <td><%= rails_girl.why %></td>
+        <td><%= rails_girl.accepted %></td>
+        <td><%= rails_girl.tweeted_about %></td>
+        <td><%= rails_girl.rsvp_response %></td>
+        <td><%= rails_girl.ranking %></td>
+        <td><%= link_to 'Show', rails_girl %></td>
+        <td><%= link_to 'Edit', edit_rails_girl_path(rails_girl) %></td>
+        <td><%= link_to 'Destroy', rails_girl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rails girl', new_rails_girl_path %>

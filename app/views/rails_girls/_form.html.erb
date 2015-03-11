@@ -1,0 +1,150 @@
+<%= form_for(@rails_girl) do |f| %>
+  <% if @rails_girl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rails_girl.errors.count, "error") %> prohibited this rails_girl from being saved:</h2>
+
+      <ul>
+      <% @rails_girl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fname %><br>
+   First Name: <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname %><br>
+    <%= f.text_field :lname %>
+  </div>
+<br /><br />
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.number_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :under_21 %><br>
+    <%= f.check_box :under_21 %>
+  </div>
+  <div class="field">
+    <%= f.label :operating_system %><br>
+    <%= f.text_field :operating_system %>
+  </div>
+  <div class="field">
+    <%= f.label :newbie %><br>
+    <%= f.check_box :newbie %>
+  </div>
+  <div class="field">
+    <%= f.label :html_css %><br>
+    <%= f.check_box :html_css %>
+  </div>
+  <div class="field">
+    <%= f.label :dash %><br>
+    <%= f.check_box :dash %>
+  </div>
+  <div class="field">
+    <%= f.label :tryRuby %><br>
+    <%= f.check_box :tryRuby %>
+  </div>
+  <div class="field">
+    <%= f.label :tryGit %><br>
+    <%= f.check_box :tryGit %>
+  </div>
+  <div class="field">
+    <%= f.label :code_school %><br>
+    <%= f.check_box :code_school %>
+  </div>
+  <div class="field">
+    <%= f.label :done_rg_before %><br>
+    <%= f.check_box :done_rg_before %>
+  </div>
+  <div class="field">
+    <%= f.label :lrthw %><br>
+    <%= f.check_box :lrthw %>
+  </div>
+  <div class="field">
+    <%= f.label :ror_tut_hartl %><br>
+    <%= f.check_box :ror_tut_hartl %>
+  </div>
+  <div class="field">
+    <%= f.label :learn_to_program %><br>
+    <%= f.check_box :learn_to_program %>
+  </div>
+  <div class="field">
+    <%= f.label :other_ruby_tuts %><br>
+    <%= f.check_box :other_ruby_tuts %>
+  </div>
+  <div class="field">
+    <%= f.label :other_rails_tuts %><br>
+    <%= f.check_box :other_rails_tuts %>
+  </div>
+  <div class="field">
+    <%= f.label :know_another_lang %><br>
+    <%= f.check_box :know_another_lang %>
+  </div>
+  <div class="field">
+    <%= f.label :employed_programmer %><br>
+    <%= f.check_box :employed_programmer %>
+  </div>
+  <div class="field">
+    <%= f.label :rails_installed %><br>
+    <%= f.check_box :rails_installed %>
+  </div>
+  <div class="field">
+    <%= f.label :more_info %><br>
+    <%= f.text_area :more_info %>
+  </div>
+  <div class="field">
+    <%= f.label :study_group %><br>
+    <%= f.check_box :study_group %>
+  </div>
+  <div class="field">
+    <%= f.label :how %><br>
+    <%= f.text_area :how %>
+  </div>
+  <div class="field">
+    <%= f.label :why %><br>
+    <%= f.text_area :why %>
+  </div>
+  <div class="field">
+    <%= f.label :accepted %><br>
+    <%= f.check_box :accepted %>
+  </div>
+  <div class="field">
+    <%= f.label :tweeted_about %><br>
+    <%= f.check_box :tweeted_about %>
+  </div>
+  <div class="field">
+    <%= f.label :rsvp_response %><br>
+    <%= f.check_box :rsvp_response %>
+  </div>
+  <div class="field">
+    <%= f.label :ranking %><br>
+    <%= f.number_field :ranking %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
